@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON 转换工具</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>JSON 转换工具</h1>
+      <p class="subtitle">格式化、压缩、验证 JSON 数据</p>
+    </header>
+
+    <main class="main-content">
+      <div class="panel input-panel">
+        <div class="panel-header">
+          <h2>输入</h2>
+        </div>
+        <textarea 
+          id="input-area" 
+          class="text-area" 
+          placeholder="在此粘贴或输入 JSON 数据..."
+        ></textarea>
+      </div>
+
+      <div class="controls">
+        <button id="format-btn" class="btn btn-primary">格式化</button>
+        <button id="compress-btn" class="btn btn-primary">压缩</button>
+        <button id="escape-btn" class="btn btn-primary">转义</button>
+        <button id="unescape-btn" class="btn btn-primary">去转义</button>
+        <button id="validate-btn" class="btn btn-secondary">验证</button>
+        <button id="copy-btn" class="btn btn-secondary">复制</button>
+        <button id="clear-btn" class="btn btn-danger">清空</button>
+        <button id="history-btn" class="btn btn-secondary">历史</button>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-header">
+          <div class="header-left">
+            <h2>输出</h2>
+            <div id="tree-controls" class="tree-controls" style="display: none;">
+              <button id="expand-all-btn" class="tree-control-btn" title="全部展开">展开</button>
+              <button id="collapse-all-btn" class="tree-control-btn" title="全部收起">收起</button>
+            </div>
+          </div>
+          <div class="view-toggle">
+            <button id="text-view-btn" class="view-btn active">文本</button>
+            <button id="tree-view-btn" class="view-btn">树形</button>
+          </div>
+        </div>
+        <textarea 
+          id="output-area" 
+          class="text-area"
+        ></textarea>
+        <div id="tree-view" class="tree-view" style="display: none;"></div>
+      </div>
+    </main>
+
+    <div id="message-container" class="message-container"></div>
+    <div id="loading-indicator" class="loading-indicator" style="display: none;">
+      <div class="spinner"></div>
+      <span>处理中...</span>
+    </div>
+    
+    <!-- 历史记录侧边栏 -->
+    <div id="history-sidebar" class="history-sidebar">
+      <div class="history-header">
+        <h3>历史记录</h3>
+        <button id="close-history-btn" class="close-btn">×</button>
+      </div>
+      <div class="history-actions">
+        <button id="clear-history-btn" class="btn-small btn-danger-small">清空历史</button>
+      </div>
+      <div id="history-list" class="history-list"></div>
+    </div>
+    <div id="history-overlay" class="history-overlay"></div>
+    
+    <footer class="version-info">
+      v1.3.2
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
