@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 node_modules
 dist
 coverage
 .DS_Store
 *.log
+=======
+node_modules
+dist
+coverage
+.DS_Store
+*.log
+>>>>>>> fe843481b246733b1a3a54f7b6dc63fc7c3e1960
