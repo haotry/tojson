@@ -3,6 +3,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
+  plugins: [],
   build: {
     outDir: 'dist',
     rollupOptions: {
