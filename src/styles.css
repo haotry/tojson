@@ -573,3 +573,72 @@ header h1 {
     right: -100%;
   }
 }
+
+/* SEO 内容样式 */
+.seo-content {
+  max-width: 1200px;
+  margin: 60px auto 40px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #333;
+  line-height: 1.8;
+}
+
+.seo-content h2 {
+  color: #1e3c72;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #2a5298;
+  padding-bottom: 10px;
+}
+
+.seo-content h3 {
+  color: #2a5298;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.seo-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.seo-content ul {
+  margin: 20px 0;
+  padding-left: 25px;
+}
+
+.seo-content li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.seo-content strong {
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .seo-content {
+    padding: 25px;
+    margin: 40px 10px 20px;
+  }
+  
+  .seo-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .seo-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .seo-content p,
+  .seo-content li {
+    font-size: 0.95rem;
+  }
+}
