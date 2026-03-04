@@ -11,3 +11,10 @@ coverage
 .DS_Store
 *.log
 >>>>>>> fe843481b246733b1a3a54f7b6dc63fc7c3e1960
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
